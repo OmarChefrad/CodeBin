@@ -54,4 +54,4 @@ app.get(`/:id`, async (req, res) => {
   }
 })
 
-app.listen(port, () => console.log(`listening on port ${port}...`))
+app.listen(process.env.PORT || 5000)
