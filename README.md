@@ -12,3 +12,4 @@ Type what you want me to see, click "Save", and then copy the URL. Send that
 URL to someone and they'll see what you see.
 
 ## Have Fun Sharing Code
+https://codebinshare.herokuapp.com
