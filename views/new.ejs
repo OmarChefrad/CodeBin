@@ -30,14 +30,17 @@
     <title>CodeBin</title>
   </head>
   <body>
-    <form action="/save" method="post">
-      <div class="wrapper">
-        <div class="line-numbers"></div>
-        <textarea autofocus name="value"><%locals.value%></textarea>
-      </div>
-    </form>
-    <script>
-      autosize(document.querySelector("textarea"))
-    </script>
+    <div class="overview">
+      <form action="/save" method="post">
+        <%- include("_buttons.ejs" , {canSave: true})%>
+        <div class="wrapper">
+          <div class="line-numbers"></div>
+          <textarea autofocus name="value"><%locals.value%></textarea>
+        </div>
+      </form>
+      <script>
+        autosize(document.querySelector("textarea"))
+      </script>
+    </div>
   </body>
 </html>

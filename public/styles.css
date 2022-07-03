@@ -1,6 +1,6 @@
 body {
   background-color: #22272e;
-  margin: 0;
+  margin-left: 0.5rem;
 }
 
 .wrapper {
@@ -32,7 +32,92 @@ textarea {
   margin: 1rem;
   color: #adbac7;
   font-family: monospace;
+  font-size: 1rem;
   min-height: calc(100% - 2rem);
   border: none;
   outline: none;
+}
+
+.buttons-wrapper {
+  position: fixed;
+  top: 0;
+  right: 0;
+  opacity: 0.2;
+  transition: opacity 200ms ease-in-out;
+  background-color: #2d333b;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  margin: 0.5rem;
+}
+
+.buttons-wrapper:hover {
+  opacity: 1;
+  transition: opacity 500ms ease-in-out;
+}
+.logo {
+  font-size: 3rem;
+  text-align: center;
+  text-decoration: none;
+  color: #adbac7;
+  width: 100%;
+  display: inline-block;
+  font-family: monospace;
+}
+.logo:hover {
+  text-decoration: solid;
+}
+.buttons {
+  display: flex;
+  justify-content: center;
+}
+.buttons > * + * {
+  margin-left: 0.5rem;
+}
+
+.btn {
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: none;
+}
+.btn:hover {
+  transition: opacity 500ms ease-in-out;
+  color: #3c3f41;
+  border: 0.1rem solid #3c3f41;
+}
+
+.btn2 {
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: none;
+  background-color: whitesmoke;
+  color: black;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  border: 0.1rem solid black;
+  font-family: monospace;
+}
+.btn2:hover {
+  transition: opacity 1000ms ease-in-out;
+  color: #3c3f41;
+  border: 0.1rem solid #3c3f41;
+}
+
+.language-markup {
+  padding: 0;
+  margin: 2rem;
+  color: #adbac7;
+  font-family: monospace;
+  min-height: calc(100% - 2rem);
+}
+
+.overview {
+  display: flex;
+  flex-direction: column;
+  font-size: 1rem;
 }
