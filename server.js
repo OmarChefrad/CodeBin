@@ -1,7 +1,7 @@
 const express = require("express")
 const app = express()
-const port = 3000
 const mongoose = require("mongoose")
+const dotenv = require("dotenv").config()
 
 const Document = require("./models/Document.js")
 
@@ -25,16 +25,15 @@ Type what you want me to see, click "Save", and then copy the URL. Send that
 URL to someone and they'll see what you see.`
   res.render("index", { code, language: "plaintext" })
 })
-const dasdsadsa =
-  "mongodb+srv://Umar19:mlc2adrkE6fL2hkI@cluster0.hnvak.mongodb.net/?retryWrites=true&w=majority"
+const mongoDB = process.env.MGDB
 
 //no sql database connection
 //mlc2adrkE6fL2hkI
 mongoose
-  .connect(dasdsadsa)
+  .connect(mongoDB)
   .then(() => console.log("Connected to MongoDB..."))
   .catch((err) => console.error("Could not connect to MongoDB...", err))
-  
+
 app.get("/new", (req, res) => {
   res.render("new")
 })
